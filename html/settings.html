@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="app-body" data-page="settings">
+  <a class="skip-link" href="#settingsContent">Skip to content</a>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass-card">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><rect x="3" y="3" width="22" height="22" rx="8"></rect><path d="M8 14.5l4 4L20 9.5"></path></svg></span>
+        <span><strong>TaskFlow</strong><small>Settings</small></span>
+      </a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link" href="profile.html">Profile</a>
+        <a class="nav-link active" href="settings.html">Settings</a>
+        <a class="nav-link" href="analysis.html">Analysis</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="soft-button compact-button" data-theme-toggle type="button">Toggle theme</button>
+        <button class="ghost-button compact-button" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-stage" id="settingsContent">
+      <header class="topbar glass-card">
+        <div>
+          <p class="eyebrow">Preferences</p>
+          <h1>Settings</h1>
+        </div>
+        <a class="soft-button compact-button" href="profile.html">Profile settings</a>
+      </header>
+
+      <section class="settings-grid">
+        <div class="settings-column">
+          <section class="glass-card settings-panel">
+            <h2>Appearance</h2>
+            <label class="toggle-row"><span>Dark mode</span><input id="darkModeSetting" type="checkbox" /></label>
+            <label class="toggle-row"><span>High contrast</span><input id="contrastSetting" type="checkbox" /></label>
+            <label class="toggle-row"><span>Notifications</span><input id="notificationsSetting" type="checkbox" /></label>
+            <div class="theme-swatches" aria-label="Theme selection">
+              <button class="swatch purple" data-theme="purple" type="button" aria-label="Purple theme"></button>
+              <button class="swatch blue" data-theme="blue" type="button" aria-label="Blue theme"></button>
+              <button class="swatch green" data-theme="green" type="button" aria-label="Green theme"></button>
+              <button class="swatch orange" data-theme="orange" type="button" aria-label="Orange theme"></button>
+            </div>
+          </section>
+
+          <details class="glass-card settings-panel settings-disclosure">
+            <summary>Security question</summary>
+            <form class="disclosure-form" id="securityForm">
+              <select class="plain-input" id="settingsSecurityQuestion">
+                <option value="">Choose a question</option>
+                <option value="What is your favorite color?">What is your favorite color?</option>
+                <option value="What is your pet's name?">What is your pet's name?</option>
+                <option value="What is your favorite movie?">What is your favorite movie?</option>
+                <option value="What is your birthplace?">What is your birthplace?</option>
+                <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+              </select>
+              <input class="plain-input" id="settingsSecurityAnswer" type="text" placeholder="Security answer" />
+              <button class="primary-button compact-button" type="submit">Save security</button>
+            </form>
+          </details>
+
+          <section class="glass-card settings-panel">
+            <h2>Recently deleted</h2>
+            <ul class="trash-list" id="settingsTrashList"></ul>
+          </section>
+        </div>
+
+        <div class="settings-column">
+          <details class="glass-card settings-panel settings-disclosure">
+            <summary>Change password</summary>
+            <form class="disclosure-form" id="changePasswordForm">
+              <input class="plain-input" id="currentPassword" type="password" placeholder="Current password" autocomplete="current-password" />
+              <input class="plain-input" id="newPassword" type="password" placeholder="New password" autocomplete="new-password" />
+              <input class="plain-input" id="confirmNewPassword" type="password" placeholder="Confirm new password" autocomplete="new-password" />
+              <button class="primary-button compact-button" type="submit">Update password</button>
+            </form>
+          </details>
+
+          <section class="glass-card settings-panel">
+            <h2>Data</h2>
+            <button class="soft-button compact-button" id="settingsBackupBtn" type="button">Backup data</button>
+            <button class="soft-button compact-button" id="settingsRestoreBtn" type="button">Restore backup</button>
+            <button class="danger-button" id="resetDataBtn" type="button">Reset all data</button>
+          </section>
+
+          <section class="glass-card settings-panel about-panel">
+            <h2>About App</h2>
+            <p>TaskFlow is a local-first productivity dashboard with authentication, task planning, Pomodoro focus, analysis, themes, backups, and keyboard shortcuts.</p>
+            <p class="muted">Shortcuts: Enter adds tasks, Ctrl + F searches, Delete removes the selected task, Ctrl + D toggles dark mode.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <script src="../js/storage.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>
+

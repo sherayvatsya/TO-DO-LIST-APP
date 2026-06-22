@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="app-body" data-page="profile">
+  <a class="skip-link" href="#profileContent">Skip to content</a>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass-card">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><rect x="3" y="3" width="22" height="22" rx="8"></rect><path d="M8 14.5l4 4L20 9.5"></path></svg></span>
+        <span><strong>TaskFlow</strong><small>Profile</small></span>
+      </a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link active" href="profile.html">Profile</a>
+        <a class="nav-link" href="settings.html">Settings</a>
+        <a class="nav-link" href="analysis.html">Analysis</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="soft-button compact-button" data-theme-toggle type="button">Toggle theme</button>
+        <button class="ghost-button compact-button" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-stage" id="profileContent">
+      <header class="topbar glass-card">
+        <div>
+          <p class="eyebrow">Account</p>
+          <h1>User profile</h1>
+        </div>
+        <a class="soft-button compact-button" href="index.html">Back to dashboard</a>
+      </header>
+
+      <section class="settings-grid">
+        <form class="glass-card settings-panel" id="profileForm">
+          <div class="profile-hero">
+            <div class="avatar" id="profileAvatar">U</div>
+            <div>
+              <h2 id="profileNameLabel">User</h2>
+              <p id="profileEmailLabel" class="muted">email@example.com</p>
+            </div>
+          </div>
+
+          <label class="form-group">
+            <span>Full name</span>
+            <input class="plain-input" id="profileName" type="text" autocomplete="name" />
+          </label>
+          <label class="form-group">
+            <span>Email</span>
+            <input class="plain-input" id="profileEmail" type="email" disabled />
+          </label>
+          <label class="form-group">
+            <span>Daily task goal</span>
+            <input class="plain-input" id="profileDailyGoal" type="number" min="1" max="50" />
+          </label>
+          <button class="primary-button compact-button" type="submit">Save profile</button>
+        </form>
+
+        <section class="glass-card settings-panel">
+          <h2>Account snapshot</h2>
+          <div class="mini-stats"><span>Joined</span><strong id="joinedAt">Today</strong></div>
+          <div class="mini-stats"><span>Total tasks</span><strong id="profileTaskCount">0</strong></div>
+          <div class="mini-stats"><span>Best streak</span><strong id="profileBestStreak">0</strong></div>
+          <p class="muted">Guest profiles are temporary but still save on this browser.</p>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <script src="../js/storage.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>
+

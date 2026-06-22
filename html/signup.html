@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="auth-shell">
+    <section class="auth-card glass-card" aria-labelledby="signupTitle">
+      <a class="brand auth-brand" href="signin.html" aria-label="TaskFlow sign up">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" role="img">
+            <rect x="3" y="3" width="22" height="22" rx="8"></rect>
+            <path d="M8 14.5l4 4L20 9.5"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>TaskFlow</strong>
+          <small>Organize with clarity</small>
+        </span>
+      </a>
+
+      <div class="auth-copy">
+        <h1 id="signupTitle">Create Account</h1>
+        <p>Start organizing your tasks today.</p>
+      </div>
+
+      <form class="auth-form" id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 20a7.5 7.5 0 0 1 15 0"></path></svg>
+            </span>
+            <input id="signupName" name="name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
+          <p class="field-error" data-error-for="signupName"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6.5h16v11H4z"></path><path d="m4.5 7 7.5 6 7.5-6"></path></svg>
+            </span>
+            <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <p class="field-error" data-error-for="signupEmail"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            </span>
+            <input id="signupPassword" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" />
+            <button class="icon-button password-toggle" type="button" aria-label="Show password" data-toggle-password="signupPassword">
+              <svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+          <p class="field-error" data-error-for="signupPassword"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m20 7-10 10-5-5"></path></svg>
+            </span>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat password" />
+            <button class="icon-button password-toggle" type="button" aria-label="Show password" data-toggle-password="confirmPassword">
+              <svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+          <p class="field-error" data-error-for="confirmPassword"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="securityQuestion">Security Question</label>
+          <div class="field select-field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.1 9a3 3 0 1 1 5.8 1c-.5 1.5-2.4 2-2.8 3.5"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            </span>
+            <select id="securityQuestion" name="securityQuestion">
+              <option value="">Choose a question</option>
+              <option value="What is your favorite color?">What is your favorite color?</option>
+              <option value="What is your pet's name?">What is your pet's name?</option>
+              <option value="What is your favorite movie?">What is your favorite movie?</option>
+              <option value="What is your birthplace?">What is your birthplace?</option>
+              <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+            </select>
+          </div>
+          <p class="field-error" data-error-for="securityQuestion"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="securityAnswer">Security Answer</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M15 7a4 4 0 1 0-3.5 3.96L5 17.5V20h2.5l6.54-6.5A4 4 0 0 0 15 7Z"></path><path d="M16.5 5.5 18 4"></path></svg>
+            </span>
+            <input id="securityAnswer" name="securityAnswer" type="text" autocomplete="off" placeholder="Your answer" />
+          </div>
+          <p class="field-error" data-error-for="securityAnswer"></p>
+        </div>
+
+        <button class="primary-button submit-button" id="signupButton" type="submit" disabled>
+          <span>Sign Up</span>
+          <span class="loader" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="signin.html">Sign In</a></p>
+    </section>
+  </main>
+
+  <script src="../js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="app-body" data-page="analysis">
+  <a class="skip-link" href="#analysisContent">Skip to content</a>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass-card">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><rect x="3" y="3" width="22" height="22" rx="8"></rect><path d="M8 14.5l4 4L20 9.5"></path></svg></span>
+        <span><strong>TaskFlow</strong><small>Analysis</small></span>
+      </a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link" href="profile.html">Profile</a>
+        <a class="nav-link" href="settings.html">Settings</a>
+        <a class="nav-link active" href="analysis.html">Analysis</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="soft-button compact-button" data-theme-toggle type="button">Toggle theme</button>
+        <button class="ghost-button compact-button" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-stage" id="analysisContent">
+      <header class="topbar glass-card">
+        <div>
+          <p class="eyebrow">Insights</p>
+          <h1>Analysis</h1>
+        </div>
+        <a class="soft-button compact-button" href="settings.html">Back to settings</a>
+      </header>
+
+      <section class="analysis-grid">
+        <section class="glass-card widget">
+          <h2>Weekly progress</h2>
+          <div class="bars" id="analysisWeeklyStats"></div>
+        </section>
+
+        <section class="glass-card widget">
+          <h2>Monthly progress</h2>
+          <div class="mini-stats"><span>Tasks created</span><strong id="analysisMonthTotal">0</strong></div>
+          <div class="mini-stats"><span>Tasks completed</span><strong id="analysisMonthDone">0</strong></div>
+          <div class="mini-stats"><span>Month completion</span><strong id="analysisMonthlyStats">0%</strong></div>
+        </section>
+
+        <section class="glass-card widget">
+          <h2>Task balance</h2>
+          <div class="mini-stats"><span>Total</span><strong id="analysisTotal">0</strong></div>
+          <div class="mini-stats"><span>Pending</span><strong id="analysisPending">0</strong></div>
+          <div class="mini-stats"><span>Completed</span><strong id="analysisCompleted">0</strong></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <script src="../js/storage.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/analysis.js"></script>
+</body>
+</html>
+

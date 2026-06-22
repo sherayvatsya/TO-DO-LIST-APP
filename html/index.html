@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Productivity Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="app-body" data-page="dashboard">
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass-card" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="TaskFlow dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" role="img">
+            <rect x="3" y="3" width="22" height="22" rx="8"></rect>
+            <path d="M8 14.5l4 4L20 9.5"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>TaskFlow</strong>
+          <small>Modern task hub</small>
+        </span>
+      </a>
+
+      <nav class="nav-list">
+        <a class="nav-link active" href="index.html">Dashboard</a>
+        <a class="nav-link" href="profile.html">Profile</a>
+        <a class="nav-link" href="settings.html">Settings</a>
+        <a class="nav-link" href="analysis.html">Analysis</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="soft-button compact-button" id="themeToggle" type="button">Toggle theme</button>
+        <button class="ghost-button compact-button" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-stage" id="mainContent">
+      <header class="topbar glass-card">
+        <div>
+          <p class="eyebrow" id="appDate">Today</p>
+          <h1 id="userGreeting">Good day</h1>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-shell" for="searchInput">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search tasks" autocomplete="off" />
+          </label>
+          <a class="soft-button compact-button" href="settings.html">Settings</a>
+        </div>
+      </header>
+
+      <section class="metrics-grid" aria-label="Productivity statistics">
+        <article class="metric-card glass-card progress-card">
+          <div class="progress-ring" id="progressRing" aria-label="Completion progress" role="img">
+            <span id="progressPercent">0%</span>
+          </div>
+          <div>
+            <p class="eyebrow">Focus Goal</p>
+            <h2 id="productivityLabel">Fresh start</h2>
+            <p class="muted">Goal: <span id="dailyGoalStatus">8h planned</span></p>
+          </div>
+        </article>
+        <article class="metric-card glass-card">
+          <span class="metric-icon warn">📋</span>
+          <p>Total Tasks</p>
+          <strong id="plannedToday">0</strong>
+        </article>
+        <article class="metric-card glass-card">
+          <span class="metric-icon success">✅</span>
+          <p>Completed Tasks</p>
+          <strong id="focusedTime">0</strong>
+        </article>
+        <article class="metric-card glass-card">
+          <span class="metric-icon danger">⌛</span>
+          <p>Remaining Tasks</p>
+          <strong id="remainingTime">0</strong>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <section class="task-panel glass-card" aria-labelledby="tasksHeading">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Today board</p>
+              <h2 id="tasksHeading">Tasks</h2>
+            </div>
+            <div class="segmented-control" role="tablist" aria-label="Task filters">
+              <button class="filter-btn active" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="pending">Pending</button>
+              <button class="filter-btn" type="button" data-filter="completed">Done</button>
+            </div>
+          </div>
+
+          <form class="task-composer" id="taskForm">
+            <div class="task-row">
+              <input id="taskInput" type="text" placeholder="Add a task and press Enter" maxlength="120" autocomplete="off" aria-label="Task title" />
+              <select id="priorityInput" aria-label="Priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <select id="categoryInput" aria-label="Category"></select>
+            </div>
+            <div class="task-row">
+              <input id="dueDateInput" type="date" aria-label="Due date" />
+              <input id="dueTimeInput" type="time" aria-label="Due time" />
+              <select id="durationInput" aria-label="Estimated duration">
+                <option value="15">15 min</option>
+                <option value="30" selected>30 min</option>
+                <option value="45">45 min</option>
+                <option value="60">1 hour</option>
+                <option value="120">2 hours</option>
+                <option value="180">3 hours</option>
+                <option value="custom">Custom duration</option>
+              </select>
+              <button class="primary-button" id="addTaskBtn" type="submit">Add</button>
+            </div>
+            <input id="customCategoryInput" type="text" placeholder="New category" maxlength="28" hidden />
+            <input id="customDurationInput" type="number" min="5" max="480" step="5" placeholder="Custom min" hidden aria-label="Custom estimated duration in minutes" />
+          </form>
+          <p class="validation-msg" id="validationMsg" role="alert"></p>
+
+          <div class="toolbar-row">
+            <label class="select-label">
+              Sort
+              <select id="sortSelect">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="priority">Priority</option>
+                <option value="dueDate">Due Date</option>
+              </select>
+            </label>
+            <button class="soft-button compact-button" id="archiveCompletedBtn" type="button">Archive completed</button>
+            <button class="soft-button compact-button" id="clearCompletedBtn" type="button">Clear completed</button>
+          </div>
+
+          <ul class="task-list" id="taskList" aria-label="Task list"></ul>
+          <div class="empty-state" id="emptyState">
+            <span class="empty-icon" aria-hidden="true">✓</span>
+            <p class="empty-title">No tasks found</p>
+            <p class="empty-sub">Add a task, change your filter, or search for something else.</p>
+          </div>
+        </section>
+
+        <aside class="right-rail">
+          <section class="glass-card widget">
+            <div class="widget-heading">
+              <h2>Focus Mode</h2>
+              <span id="pomodoroMode">Focus</span>
+            </div>
+            <div class="focus-summary">
+              <button class="soft-button compact-button" id="startFocusSession" type="button">Start Focus Session</button>
+            </div>
+            <div class="timer-display" id="timerDisplay">25:00</div>
+            <form class="timer-edit hidden" id="pomodoroEditForm">
+              <label for="focusMinutesInput">Focus minutes</label>
+              <input id="focusMinutesInput" type="number" min="1" max="180" step="1" value="25" />
+              <button class="soft-button compact-button" type="submit">Save</button>
+            </form>
+            <div class="button-row">
+              <button class="primary-button compact-button" id="pomodoroStart" type="button">Start</button>
+              <button class="soft-button compact-button" id="pomodoroPause" type="button">Pause</button>
+              <button class="ghost-button compact-button" id="pomodoroReset" type="button">Reset</button>
+              <button class="ghost-button compact-button" id="pomodoroEdit" type="button">Edit</button>
+            </div>
+          </section>
+
+          <section class="glass-card widget">
+            <div class="widget-heading">
+              <h2>Motivation</h2>
+              <button class="icon-action" id="refreshQuoteBtn" type="button" aria-label="Refresh quote">↻</button>
+            </div>
+            <blockquote id="quoteText">Small progress is still progress.</blockquote>
+          </section>
+
+          <section class="glass-card widget">
+            <div class="widget-heading">
+              <h2>Streak</h2>
+              <span>🔥</span>
+            </div>
+            <div class="streak-grid" aria-label="Streak summary">
+              <div><strong id="currentStreak">0</strong><span>Current Streak</span></div>
+              <div><strong id="bestStreak">0</strong><span>Best Streak</span></div>
+              <div class="streak-date"><strong id="lastActiveDate">Never</strong><span>Last Active Date</span></div>
+            </div>
+            <div class="milestone-row" id="milestoneRow" aria-label="Streak milestones"></div>
+            <p class="muted" id="streakMessage">Complete a task today to start a streak.</p>
+          </section>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="taskDetailsBackdrop" role="dialog" aria-modal="true" aria-labelledby="taskDetailsTitle">
+    <div class="task-details-modal glass-card">
+      <button class="icon-action modal-close" id="closeTaskDetails" type="button" aria-label="Close details">×</button>
+      <h2 id="taskDetailsTitle">Task details</h2>
+      <div class="task-details-grid">
+        <div><span>Name</span><strong id="detailTitle">—</strong></div>
+        <div><span>Category</span><strong id="detailCategory">—</strong></div>
+        <div><span>Priority</span><strong id="detailPriority">—</strong></div>
+        <div><span>Due date</span><strong id="detailDueDate">—</strong></div>
+        <div><span>Due time</span><strong id="detailDueTime">—</strong></div>
+        <div><span>Duration</span><strong id="detailDuration">—</strong></div>
+        <div><span>Status</span><strong id="detailStatus">—</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/quotes.js"></script>
+  <script src="../js/pomodoro.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
