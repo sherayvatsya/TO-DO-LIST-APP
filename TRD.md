@@ -29,18 +29,7 @@ assets/
   images/
   logo.png
 css/
-  auth.css
-  darkmode.css
   style.css
-html/
-  analysis.html
-  forgot-password.html
-  index.html
-  profile.html
-  reset-password.html
-  settings.html
-  signin.html
-  signup.html
 js/
   analysis.js
   auth.js
@@ -52,6 +41,14 @@ js/
   settings.js
   storage.js
   theme.js
+analysis.html
+forgot-password.html
+index.html
+profile.html
+reset-password.html
+settings.html
+signin.html
+signup.html
 LICENSE
 PRD.md
 README.md
@@ -62,14 +59,14 @@ TRD.md
 
 ### Pages
 
-- `html/signin.html`: signin and guest entry.
-- `html/signup.html`: local account registration.
-- `html/forgot-password.html`: account lookup and security-question verification.
-- `html/reset-password.html`: password reset after verification.
-- `html/index.html`: main dashboard, task board, metrics, Pomodoro, quotes, and streaks.
-- `html/settings.html`: preferences, security, backup, restore, reset, and trash.
-- `html/profile.html`: user profile surface.
-- `html/analysis.html`: task analytics and weekly/monthly summaries.
+- `signin.html`: signin and guest entry.
+- `signup.html`: local account registration.
+- `forgot-password.html`: account lookup and security-question verification.
+- `reset-password.html`: password reset after verification.
+- `index.html`: main dashboard, task board, metrics, Pomodoro, quotes, and streaks.
+- `settings.html`: preferences, security, backup, restore, reset, and trash.
+- `profile.html`: user profile surface.
+- `analysis.html`: task analytics and weekly/monthly summaries.
 
 ### JavaScript Modules
 

@@ -153,8 +153,8 @@ Rules:
 
 ## Acceptance Criteria
 
-- Opening `html/signin.html` allows sign in, signup navigation, and guest access.
-- Signed-in users can access `html/index.html`; signed-out users are redirected to signin.
+- Opening `signin.html` allows sign in, signup navigation, and guest access.
+- Signed-in users can access `index.html`; signed-out users are redirected to signin.
 - Tasks persist after refresh.
 - Streak data persists after refresh and uses `currentStreak`, `bestStreak`, and `completionHistory`.
 - Dark mode and selected theme persist after refresh.

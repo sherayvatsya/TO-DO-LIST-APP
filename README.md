@@ -58,18 +58,7 @@ assets/
   images/
   logo.png
 css/
-  auth.css
-  darkmode.css
   style.css
-html/
-  analysis.html
-  forgot-password.html
-  index.html
-  profile.html
-  reset-password.html
-  settings.html
-  signin.html
-  signup.html
 js/
   analysis.js
   auth.js
@@ -81,6 +70,14 @@ js/
   settings.js
   storage.js
   theme.js
+analysis.html
+forgot-password.html
+index.html
+profile.html
+reset-password.html
+settings.html
+signin.html
+signup.html
 LICENSE
 PRD.md
 README.md
@@ -90,9 +87,9 @@ TRD.md
 ## Getting Started
 
 1. Download or clone the project.
-2. Open `html/signin.html` in a modern browser.
+2. Open `signin.html` in a modern browser.
 3. Create a local account or continue as guest.
-4. Use the dashboard from `html/index.html`.
+4. Use the dashboard from `index.html`.
 
 Because this is a static app, you can also run it with any simple local server if your browser or editor setup prefers that.
 
@@ -110,14 +107,14 @@ http://localhost:8000/html/signin.html
 
 ## Main Pages
 
-- `html/signin.html`: signin and guest access.
-- `html/signup.html`: account creation.
-- `html/forgot-password.html`: security-question verification.
-- `html/reset-password.html`: local password reset.
-- `html/index.html`: main dashboard and task board.
-- `html/settings.html`: preferences, backup, restore, reset, and trash.
-- `html/profile.html`: user profile.
-- `html/analysis.html`: productivity analytics.
+- `signin.html`: signin and guest access.
+- `signup.html`: account creation.
+- `forgot-password.html`: security-question verification.
+- `reset-password.html`: local password reset.
+- `index.html`: main dashboard and task board.
+- `settings.html`: preferences, backup, restore, reset, and trash.
+- `profile.html`: user profile.
+- `analysis.html`: productivity analytics.
 
 ## Data Storage
 
