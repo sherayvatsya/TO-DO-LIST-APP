@@ -2,8 +2,7 @@
 
 TaskFlow is a local-first productivity dashboard built with HTML, CSS, JavaScript, and `localStorage`. It combines task management, dashboard metrics, Pomodoro focus sessions, analytics, dark mode, responsive design, and a professional streak system in a lightweight browser app.
 
-##✨ Features
-
+✨ Features
 🔐 Authentication
 ✅ Local Sign Up
 ✅ Local Sign In
@@ -15,22 +14,19 @@ TaskFlow is a local-first productivity dashboard built with HTML, CSS, JavaScrip
 ➕ Create Tasks
 ✏️ Edit Tasks
 ✅ Complete / Uncomplete Tasks
-🗑 Delete Tasks
-♻ Restore Deleted Tasks
+🗑️ Delete Tasks
+♻️ Restore Deleted Tasks
 📦 Archive Completed Tasks
 🧹 Clear Completed Tasks
-
-Each task supports:
-
+📋 Each Task Supports
 🔥 Priority
 📂 Category
 📅 Due Date
 ⏰ Due Time
 ⌛ Estimated Duration
-📂 Custom Categories
-
-Create unlimited categories to organize your workflow efficiently.
-
+📁 Custom Categories
+📂 Create Unlimited Categories
+📁 Organize Tasks Efficiently
 🔍 Search, Filter & Sort
 🔎 Search Tasks
 🎯 Filter by Status
@@ -38,25 +34,22 @@ Create unlimited categories to organize your workflow efficiently.
 📅 Sort by Date
 🔥 Sort by Priority
 📊 Productivity Dashboard
-
-Track your daily performance with:
-
 📈 Progress Ring
 🎯 Daily Goal Progress
 ✅ Completed Tasks
 📋 Pending Tasks
 📊 Completion Rate
-⏳ Pomodoro Focus Timer
-
-Stay productive with:
-
-⏱ Custom Focus Sessions
+🍅 Pomodoro Focus Timer
+⏱️ Custom Focus Sessions
 🍅 Pomodoro Timer
 🎯 Improved Focus
 💬 Daily Motivation
-
-Get random motivational quotes to keep yourself inspired every day.
-
+💭 Random Motivation Quotes
+🚀 Stay Inspired Every Day
+📈 Productivity Analytics
+📅 Weekly Summary
+📆 Monthly Summary
+📊 Productivity Statistics
 
 # 🌐 Live Demo
 
