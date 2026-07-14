@@ -1,23 +1,62 @@
-# TaskFlow
+# 🚀 TaskFlow – Local First Productivity Dashboard
 
 TaskFlow is a local-first productivity dashboard built with HTML, CSS, JavaScript, and `localStorage`. It combines task management, dashboard metrics, Pomodoro focus sessions, analytics, dark mode, responsive design, and a professional streak system in a lightweight browser app.
 
-## Features
+##✨ Features
 
-- Local signup, signin, guest mode, logout, forgot-password, and reset-password flows.
-- Task creation with priority, category, due date, due time, and estimated duration.
-- Custom categories.
-- Task edit, complete, uncomplete, delete, restore, clear completed, and archive completed.
-- Search, filtering, and sorting.
-- Dashboard metrics with progress ring.
-- Daily goal progress.
-- Pomodoro timer with editable focus duration.
-- Motivation quote widget.
-- Productivity analytics with weekly and monthly summaries.
-- Professional streak system with current streak, best streak, last active date, milestones, and toast notifications.
-- Dark mode, high contrast mode, and color themes.
-- Local backup, restore, and reset.
-- Responsive layout for desktop, tablet, and mobile.
+🔐 Authentication
+✅ Local Sign Up
+✅ Local Sign In
+✅ Guest Mode
+✅ Forgot Password
+✅ Reset Password
+✅ Logout
+📝 Smart Task Management
+➕ Create Tasks
+✏️ Edit Tasks
+✅ Complete / Uncomplete Tasks
+🗑 Delete Tasks
+♻ Restore Deleted Tasks
+📦 Archive Completed Tasks
+🧹 Clear Completed Tasks
+
+Each task supports:
+
+🔥 Priority
+📂 Category
+📅 Due Date
+⏰ Due Time
+⌛ Estimated Duration
+📂 Custom Categories
+
+Create unlimited categories to organize your workflow efficiently.
+
+🔍 Search, Filter & Sort
+🔎 Search Tasks
+🎯 Filter by Status
+📌 Filter by Priority
+📅 Sort by Date
+🔥 Sort by Priority
+📊 Productivity Dashboard
+
+Track your daily performance with:
+
+📈 Progress Ring
+🎯 Daily Goal Progress
+✅ Completed Tasks
+📋 Pending Tasks
+📊 Completion Rate
+⏳ Pomodoro Focus Timer
+
+Stay productive with:
+
+⏱ Custom Focus Sessions
+🍅 Pomodoro Timer
+🎯 Improved Focus
+💬 Daily Motivation
+
+Get random motivational quotes to keep yourself inspired every day.
+
 
 # 🌐 Live Demo
 
@@ -47,7 +86,7 @@ The streak system is designed to avoid overcounting:
 
 
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - HTML5
 - CSS3
@@ -56,7 +95,7 @@ The streak system is designed to avoid overcounting:
 
 No build tools, package installation, backend, or database are required.
 
-# Project Structure
+## 📁 Project Structure
 
 ```text
 assets/
@@ -91,13 +130,13 @@ TRD.md
 ```
 
 
-# 🎨 Customization
+## 🎨 Customization
 🌙 Dark Mode
 ☀ Light Mode
 🎨 Color Themes
 ♿ High Contrast Mode
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Download or clone the project.
 2. Open `signin.html` in a modern browser.
@@ -129,7 +168,7 @@ http://localhost:8000/html/signin.html
 - `profile.html`: user profile.
 - `analysis.html`: productivity analytics.
 
-## Data Storage
+## 💽 Data Storage
 
 TaskFlow stores data in the browser using `localStorage`.
 
@@ -145,7 +184,7 @@ Stored data includes:
 
 Data is scoped by user email where applicable. Guest data uses the guest account key.
 
-## Responsive Design
+## 📱Responsive Design
 
 The layout adapts across screen sizes:
 
@@ -154,19 +193,19 @@ The layout adapts across screen sizes:
 - Mobile: forms, cards, task actions, metrics, streaks, and toolbars collapse into single-column layouts.
 
 
-## Documentation
+## 📚 Documentation
 
 - [PRD.md](PRD.md): Product requirements, goals, user needs, features, and acceptance criteria.
 - [TRD.md](TRD.md): Technical requirements, architecture, data models, storage keys, and testing checklist.
 - [LICENSE](LICENSE): MIT license.
 
-## Limitations
+## ⚠ Limitations
 
 - Authentication is local-demo authentication only.
 - Passwords and security answers are stored in `localStorage`, so this is not production-grade security.
 - No backend, cloud sync, real email delivery, or cross-device synchronization.
 - Clearing browser storage will remove app data unless a local backup exists.
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
