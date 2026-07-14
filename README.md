@@ -2,60 +2,14 @@
 
 TaskFlow is a local-first productivity dashboard built with HTML, CSS, JavaScript, and `localStorage`. It combines task management, dashboard metrics, Pomodoro focus sessions, analytics, dark mode, responsive design, and a professional streak system in a lightweight browser app.
 
-✨ Features
-🔐 Authentication
-✅ Local Sign Up
-✅ Local Sign In
-✅ Guest Mode
-✅ Forgot Password
-✅ Reset Password
-✅ Logout
-📝 Smart Task Management
-➕ Create Tasks
-✏️ Edit Tasks
-✅ Complete / Uncomplete Tasks
-🗑️ Delete Tasks
-♻️ Restore Deleted Tasks
-📦 Archive Completed Tasks
-🧹 Clear Completed Tasks
-📋 Each Task Supports
-🔥 Priority
-📂 Category
-📅 Due Date
-⏰ Due Time
-⌛ Estimated Duration
-📁 Custom Categories
-📂 Create Unlimited Categories
-📁 Organize Tasks Efficiently
-🔍 Search, Filter & Sort
-🔎 Search Tasks
-🎯 Filter by Status
-📌 Filter by Priority
-📅 Sort by Date
-🔥 Sort by Priority
-📊 Productivity Dashboard
-📈 Progress Ring
-🎯 Daily Goal Progress
-✅ Completed Tasks
-📋 Pending Tasks
-📊 Completion Rate
-🍅 Pomodoro Focus Timer
-⏱️ Custom Focus Sessions
-🍅 Pomodoro Timer
-🎯 Improved Focus
-💬 Daily Motivation
-💭 Random Motivation Quotes
-🚀 Stay Inspired Every Day
-📈 Productivity Analytics
-📅 Weekly Summary
-📆 Monthly Summary
-📊 Productivity Statistics
+## ✨ Features
+TaskFlow offers a complete productivity experience with local authentication (Sign Up, Sign In, Guest Mode, Forgot Password, Reset Password, and Logout), smart task management (Create, Edit, Complete, Uncomplete, Delete, Restore, Archive, and Clear Completed Tasks), custom categories, task priorities, due dates, due times, and estimated durations. It also includes advanced search, filtering, and sorting, a productivity dashboard with progress tracking and daily goals, a customizable Pomodoro focus timer, daily motivational quotes, weekly and monthly productivity analytics, a professional streak system with milestones and toast notifications, dark mode, high-contrast mode, multiple color themes, local backup and restore, data reset, and a fully responsive design optimized for desktop, tablet, and mobile devices.
 
 # 🌐 Live Demo
 
 🚀 Live Website: https://to-do-list-app-beta-neon.vercel.app/signin.html
 
-##🔥 Professional Streak System
+## 🔥 Professional Streak System
 
 TaskFlow tracks productive days using this local data shape:
 
