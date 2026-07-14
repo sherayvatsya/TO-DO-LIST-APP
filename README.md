@@ -23,7 +23,7 @@ TaskFlow is a local-first productivity dashboard built with HTML, CSS, JavaScrip
 
 🚀 Live Website: https://to-do-list-app-beta-neon.vercel.app/signin.html
 
-## Streak System
+##🔥 Professional Streak System
 
 TaskFlow tracks productive days using this local data shape:
 
@@ -45,9 +45,6 @@ The streak system is designed to avoid overcounting:
 - Best streak never decreases.
 - Milestones are available at 3, 7, 30, and 100 days.
 
-# 📸 Preview
-
-
 
 
 ## Tech Stack
@@ -59,7 +56,7 @@ The streak system is designed to avoid overcounting:
 
 No build tools, package installation, backend, or database are required.
 
-## Project Structure
+# Project Structure
 
 ```text
 assets/
@@ -92,6 +89,13 @@ PRD.md
 README.md
 TRD.md
 ```
+
+
+# 🎨 Customization
+🌙 Dark Mode
+☀ Light Mode
+🎨 Color Themes
+♿ High Contrast Mode
 
 ## Getting Started
 
