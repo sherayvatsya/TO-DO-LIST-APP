@@ -45,6 +45,11 @@ The streak system is designed to avoid overcounting:
 - Best streak never decreases.
 - Milestones are available at 3, 7, 30, and 100 days.
 
+# 📸 Preview
+
+
+
+
 ## Tech Stack
 
 - HTML5
@@ -143,6 +148,7 @@ The layout adapts across screen sizes:
 - Desktop: sidebar and dashboard content sit side by side.
 - Tablet: content stacks into simpler grids.
 - Mobile: forms, cards, task actions, metrics, streaks, and toolbars collapse into single-column layouts.
+
 
 ## Documentation
 
